@@ -1,0 +1,26 @@
+{
+  "name": "es6-protractor-jasmine2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverfrost/Automation_Template.ES6-Protractor-Jasmine2-Log4js-Allure.git"
+  },
+  "author": "Serhii Kholodnyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliverfrost/Automation_Template.ES6-Protractor-Jasmine2-Log4js-Allure/issues"
+  },
+  "homepage": "https://github.com/oliverfrost/Automation_Template.ES6-Protractor-Jasmine2-Log4js-Allure#readme",
+  "dependencies": {
+    "chance": "^1.0.4",
+    "jasmine": "^2.4.1",
+    "jsdoc": "^3.4.0",
+    "log4js": "^0.6.38",
+    "protractor": "^4.0.3"
+  }
+}

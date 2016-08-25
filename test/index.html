@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+
+    <script>
+        angular.module('checkboxExample', [])
+                .controller('ExampleController', ['$scope', function($scope) {
+                    $scope.checkboxModel = {
+                        value1 : true,
+                        value2 : 'YES'
+                    };
+                }]);
+    </script>
+</head>
+<body ng-app="checkboxExample">
+
+
+<form name="myForm" ng-controller="ExampleController">
+    <label>Value1:
+        <input id="first" type="checkbox" ng-model="checkboxModel.value1">
+    </label><br/>
+    <label>Value2:
+        <input id="second" type="checkbox" ng-model="checkboxModel.value2"
+               ng-true-value="'YES'" ng-false-value="'NO'">
+    </label><br/>
+    <tt>value1 = {{checkboxModel.value1}}</tt><br/>
+    <tt>value2 = {{checkboxModel.value2}}</tt><br/>
+</form>
+
+
+
+</body>
+</html>
