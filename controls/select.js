@@ -1,16 +1,16 @@
 let Control = require("./control");
 
 class Select extends Control {
-    constructor(){
-        super();
+    constructor(locator) {
+        super(locator);
     }
 
     get value() {
         return this.element.$('option:checked').getText();
     }
 
-    set value(v) {
-        return this.element.$(`option[label="${v}"]`).click()
+    set value(value) {
+        return this.element.$(`option[label="${value}"]`).click()
     }
 }
 

@@ -1,29 +1,29 @@
 let BasePage = require('./basePage');
 
 class LoginPage extends BasePage {
-    constructor(){
+    constructor() {
         super();
         this.__loginInput = $('/* Place your selector here */');
         this.__passwordInput = $('/* Place your selector here */');
         this.__submitButton = $('/* Place your selector here */');
     }
 
-    login(login, password){
+    login(login, password) {
         this.logger.info(`Authorizing as: ${login} / ${password}`);
         this.typeLogin(login);
         this.typePassword(password);
         this.submitCredentials();
     }
 
-    typeLogin(login){
+    typeLogin(login) {
         this.type(this.__loginInput, login);
     }
 
-    typePassword(password){
+    typePassword(password) {
         this.type(this.__passwordInput, password);
     }
 
-    submitCredentials(){
+    submitCredentials() {
         this.__submitButton.click();
     }
 }

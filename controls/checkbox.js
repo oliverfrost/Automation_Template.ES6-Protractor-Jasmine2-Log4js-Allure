@@ -1,22 +1,28 @@
 let Control = require("./control");
 
 class Checkbox extends Control {
-    constructor(){
-        super();
+    constructor(locator) {
+        super(locator);
     }
 
-    isChecked(){
+    /** Defines if checkbox is selected or not.
+     * A promise that will be resolved with whether this element is currently selected.
+     * @returns {webdriver.promise.Promise.<boolean>}
+     */
+    isChecked() {
         return this.element.isSelected();
     }
 
-    check(){
-        if(!this.isChecked()){
+    check() {
+        if (!this.isChecked()) {
+            this.logger.debug(`Checking element: ${this.element.locator()}.`);
             this.element.click();
         }
     }
 
-    uncheck(){
-        if(this.isChecked()){
+    uncheck() {
+        if (this.isChecked()) {
+            this.logger.debug(`Unchecking element: ${this.element.locator()}.`);
             this.element.click();
         }
     }

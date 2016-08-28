@@ -19,7 +19,9 @@
   "dependencies": {
     "chance": "^1.0.4",
     "jasmine": "^2.4.1",
+    "jasmine-spec-reporter": "^2.7.0",
     "jsdoc": "^3.4.0",
+    "lodash": "^4.15.0",
     "log4js": "^0.6.38",
     "protractor": "^4.0.3"
   }
