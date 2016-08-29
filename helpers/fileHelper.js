@@ -1,6 +1,7 @@
 let HelperBase = require('./HelperBase'),
     fs = require('fs');
 
+/** Class represent base for all other pages and contains methods that are common to them */
 class FileHelper extends HelperBase {
     constructor() {
         super();

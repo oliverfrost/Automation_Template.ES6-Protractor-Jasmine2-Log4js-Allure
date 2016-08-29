@@ -31,9 +31,19 @@ exports.config = {
 
     /** ----- Fixtures ----- */
     onPrepare: function () {
+        browser.driver.manage().window().maximize();
+
         // adds jasmine spec reporter: https://www.npmjs.com/package/jasmine-spec-reporter
         var SpecReporter = require('jasmine-spec-reporter');
         jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: 'all'}));
+
+        // connect Allure reporter
+        var allure = require('../utils/reporter/allureReporter');
+        jasmine.getEnv().addReporter(allure);
+        global.allure = allure;
+        jasmine.getEnv().afterEach(function(done){
+            allure.takeScreenshot("after test", done);
+        });
     },
 
 

@@ -1,5 +1,6 @@
 let BasePage = require('./basePage');
 
+/** Class represent PO of main Login Page */
 class LoginPage extends BasePage {
     constructor() {
         super();
